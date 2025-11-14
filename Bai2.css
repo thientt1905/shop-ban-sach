@@ -1,0 +1,91 @@
+.container{
+    max-width: 1200px;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px;
+    background: #00BEDFff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    padding: 0 0 25px 0;
+}
+.container .gridcard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+}
+
+.container .gridcard .card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.card a img{
+    width: 200px;
+    height: 200px;
+}
+
+.container .gridcard .card .header-card {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+.header-card p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+h5{
+    display: inline-block;
+    color: black;
+}
+h5:hover{
+    transform: scale(1.05);
+    color: blue;
+}
+.header-card .new-model {
+    color: #FF0000;
+}
+
+.header-card .installment {
+    color: #00A676;
+}
+.container .gridcard .card .center-card {
+    display: flex;
+    gap: 10px;
+}
+.center-card p {
+    margin: 0;
+    font-size: 12px;
+}
+.center-card .stand {
+    color: rgb(142, 141, 145);
+    background-color: #f2f4f7;
+
+}
+
+.center-card .free {
+    color: rgb(142, 141, 145);
+    background-color: #f2f4f7;
+
+}
+.container .gridcard .card .star {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+}
+.gia{
+    color: red;
+}
+.giasale del{
+    color: rgb(142, 141, 145);
+}
+.giasale{
+    color: red;
+}
+
+
+

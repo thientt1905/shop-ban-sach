@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header{
+    width: 100%;
+    height: auto;
+    /* max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff; */
+}
+header .top-header{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+header .bottom-header{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15%;
+    margin: 0 auto;
+}
+.bottom-header a.logo{
+    display: block;
+    padding: 5px;
+}
+.bottom-header a.logo img{
+    width: 120px;
+}
+.bottom-header nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 18px;
+    font-weight: bold;
+}
+.bottom-header nav a:hover{
+    background-color: black;
+}
+
+.container h2 {
+    display: inline-block; 
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.container, .box{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+}
+
+.container hr {
+    display: inline-block;
+    width: 90%;
+    border: 2px solid #0c0101;
+    vertical-align: middle;
+    margin: 0;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+    padding: 15px 15px;
+}
+.main img:hover {
+    transform: scale(1.05);
+}
+
+.main a {
+    max-width: 45%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 0; 
+}
+
+.main .content {
+    max-width: 45%;
+    text-align: left;
+    margin-left: auto;
+   
+}
+.main p{
+    font-size: 20px;
+    text-align: end;
+    
+}
+.main h3{
+    font-size: 30px;
+    text-align: end;
+    display: inline-block;
+    color:#0c0101;
+}
+.main h3:hover{
+    transform: scale(1.08);
+    color:#007bff;
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.box p{
+    color: #0c0101;
+    padding: 0;
+    margin: 0;
+}
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item a {
+    padding: 10px;
+    font-size: 16px;
+   
+}
+.item p:hover {
+    color: #007bff;
+    cursor: pointer;
+}

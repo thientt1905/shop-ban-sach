@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiệp Sinh Nhật</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      height: 500px;
+      perspective: 1000px;
+    }
+
+    .envelope {
+      width: 100%;
+      height: 100%;
+      background: #f06292;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 250px;
+      background: #ec407a;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      z-index: 3;
+      transition: transform 1s ease;
+    }
+
+    .letter {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 40px;
+        width: 730px;
+        height: 430px;
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        transform: translateY(100%);
+        transition: transform 1s ease;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .letter h2 {
+      margin: 5px 0;
+      color: #e91e63;
+      font-size: 20px;
+    }
+
+    .letter p {
+      font-size: 15px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .open-btn {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 15px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 4;
+    }
+
+    .container.open .flap {
+      transform: rotateX(-180deg);
+    }
+
+    .container.open .letter {
+      transform: translateY(-40px);
+    }
+
+    .container.open .open-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="cardContainer">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="letter">
+        <h2>🎉 Thiệp Mời </h2>
+        <p>Nhân dịp mừng thọ 21 nồi bánh chưng mình có tổ chức một bữa tiệc nhỏ. Thân mời các bạn chung vui cùng với mình!</p>
+        
+        <p><strong>⏰ Thời gian:</strong> 18:00 - Thứ Hai, 19/05/2025</p>
+        <p><strong>📍 Địa điểm:</strong> Quán 74, đường ray Ngô Thì Nhậm</p>
+        
+        <hr style="border:none; border-top:1px solid #eee; margin:15px 0;">
+        
+        <h3>Chương trình dự kiến:</h3>
+        <ul>
+            <li>18:00 - Đón khách và giao lưu văn hóa văn mồm </li>
+            <li>18:30 - Tuyên bố lý do giới thiệu đại biểu </li>
+            <li>19:00 - Tiệc bắt đầu & khai tiệc </li>
+            <li>22:05 - Triển khai thủ tục sau mỗi buổi Gathering! </li>
+        </ul>
+        
+        <p style="font-style: italic; margin-top: 20px;">
+            Sự hiên diện của bạn là niềm vui và là niềm hạnh phúc đối với mình!💖<br/>
+            Rất mong sự có mặt của bạn để buổi tiệc thêm phần ý nghĩa! 💖
+        </p>
+        
+        <p style="font-size: 14px; color: #888; margin-top: 10px;">
+            Nếu bạn cần thêm thông tin, vui lòng liên hệ: <br/>
+            📞 0819 774 234 <br/>
+        </p>
+        </div>
+
+      <button class="open-btn" onclick="openCard()">💌</button>
+    </div>
+  </div>
+
+  <script>
+    function openCard() {
+      document.getElementById("cardContainer").classList.add("open");
+    }
+  </script>
+
+</body>
+</html>
